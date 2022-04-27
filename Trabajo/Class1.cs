@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 namespace Trabajo
 {
     
-
-    
         internal class Class1
         {
             public static void Main(string[] args)
@@ -166,12 +164,13 @@ namespace Trabajo
             }
             static void AreayVolumen()
             {
+
+           
                 Console.WriteLine("Ingrese la medida del lado del cilindro: ");
-                double LAdo = double.Parse(Console.ReadLine());
-                
-               
+            
             }
         }
     }
+
 
 
