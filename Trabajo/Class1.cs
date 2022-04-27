@@ -44,7 +44,7 @@ namespace Trabajo
                         }
                     case "99":
                         {
-
+                            Salida();
                             break;
                         }
 
@@ -66,48 +66,63 @@ namespace Trabajo
                 Console.WriteLine(" g. si desea Realizar un algoritmo que lea el radio de una circunferencia  ");
                 Console.WriteLine(" h. si desea Calcular el promedio de tres (3) números ingresados por teclado.");
                 Console.WriteLine(" 99. si desea Salir del programa");
+                Console.WriteLine("---------------------- ");
                 opcion_operadores = Console.ReadLine();
 
                 switch (opcion_operadores)
                 {
                     case "a":
                         {
+                            Console.WriteLine("---------------------");
                             BaseTriangulo();
                             break;
                         }
                     case "b":
                         {
+                            Console.WriteLine("---------------------");
                             Suma();
                             break;
                         }
                     case "c":
                         {
+                            Console.WriteLine("---------------------");
                             Cuadrado();
                             break;
                         }
                     case "d":
                         {
+                            Console.WriteLine("---------------------");
+                            Conversion();
                             break;
                         }
                     case "e":
                         {
+                            Console.WriteLine("---------------------");
                             AreayPerimetro();
                             break;
                         }
                     case "f":
                         {
+                            Console.WriteLine("---------------------");
+                            AreayVolumen();
                             break;
                         }
                     case "g":
                         {
+                            Console.WriteLine("---------------------");
+                            Radio();
                             break;
                         }
                     case "h":
                         {
+                            Console.WriteLine("---------------------");
+                            Promedio();
                             break;
                         }
                     case "99":
                         {
+                            Console.WriteLine("---------------------");
+                            Salida();
                             break;
                         }
 
@@ -164,13 +179,57 @@ namespace Trabajo
             }
             static void AreayVolumen()
             {
-
-           
-                Console.WriteLine("Ingrese la medida del lado del cilindro: ");
-            
+                int altura,Base,radio,perimetro;
+                Console.WriteLine("Ingrese la perimetro: ");
+                perimetro = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese la altura");
+                altura = int.Parse(Console.ReadLine());   
+                Console.WriteLine("Ingrese radio");
+                radio = int.Parse(Console.ReadLine());
+                Console.WriteLine("el area del cilindro es: " + (2 * Math.PI * perimetro * altura));
+                Console.WriteLine("el volumen del cilindro es:" + (Math.PI * radio * radio * altura));
+                Console.ReadKey();
             }
+            static void Conversion()
+        {
+            double euros, dolares;
+            Console.WriteLine("Ingrese los euros que desea convertir: ");
+            euros = double.Parse(Console.ReadLine());
+            dolares = euros * 1.06;
+            Console.WriteLine("La convercion a dolares es:" + dolares);
+            Console.ReadKey();
         }
-    }
+            static void Radio()
+        {
+            int area;
+            Console.WriteLine("Ingrese el area");
+            area = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("El radio es: " + Math.Sqrt (area/Math.PI));
+            Console.ReadKey();  
+
+        }
+
+        static void Promedio()
+        {
+            int n1,n2,n3;
+            Console.WriteLine("Ingrese primer valor: ");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese segundo valor: ");
+            n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese tercer valor: ");
+            n3 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("El promedio de los tres valores es de: " + (n1+n2+n3) /3 );
+            Console.ReadKey();
+        }
+            static void Salida()
+            {
+                Console.WriteLine("Fin del programa");
+            }
+
+        }
+ }
 
 
 
