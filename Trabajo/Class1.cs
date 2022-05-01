@@ -26,29 +26,10 @@ namespace Trabajo
             opcion2 = Console.ReadLine();
             switch (opcion2)
             {
-                case "1":
-                    {
-                        Operacion();
-                        break;
-                    }
-                case "2":
-                    {
-
-                        Condicionales();
-                        break;
-                    }
-                case "3":
-                    {
-                        Ciclos();
-                        break;
-                    }
-                case "99":
-                    {
-                        Salida();
-                        break;
-                    }
-
-
+                case "1": {Operacion(); break;}
+                case "2": { Condicionales(); break; }
+                case "3": { Ciclos(); break; }
+                case "99": {Salida(); break;}
             }
         }
         static void Operacion()
@@ -71,67 +52,20 @@ namespace Trabajo
 
             switch (opcion_operadores)
             {
-                case "a":
-                    {
-                        Console.WriteLine("---------------------");
-                        BaseTriangulo();
-                        break;
-                    }
-                case "b":
-                    {
-                        Console.WriteLine("---------------------");
-                        Suma();
-                        break;
-                    }
-                case "c":
-                    {
-                        Console.WriteLine("---------------------");
-                        Cuadrado();
-                        break;
-                    }
-                case "d":
-                    {
-                        Console.WriteLine("---------------------");
-                        Conversion();
-                        break;
-                    }
-                case "e":
-                    {
-                        Console.WriteLine("---------------------");
-                        AreayPerimetro();
-                        break;
-                    }
-                case "f":
-                    {
-                        Console.WriteLine("---------------------");
-                        AreayVolumen();
-                        break;
-                    }
-                case "g":
-                    {
-                        Console.WriteLine("---------------------");
-                        Radio();
-                        break;
-                    }
-                case "h":
-                    {
-                        Console.WriteLine("---------------------");
-                        Promedio();
-                        break;
-                    }
-                case "99":
-                    {
-                        Console.WriteLine("---------------------");
-                        Salida();
-                        break;
-                    }
-
+                case "a": { Console.WriteLine("---------------------"); BaseTriangulo(); break; }
+                case "b": {  Console.WriteLine("---------------------");Suma();break;}
+                case "c": { Console.WriteLine("---------------------"); Cuadrado();break; }
+                case "d": {Console.WriteLine("---------------------");Conversion(); break; }
+                case "e": {Console.WriteLine("---------------------");AreayPerimetro();break;}
+                case "f": {Console.WriteLine("---------------------");AreayVolumen();break;  }
+                case "g": {Console.WriteLine("---------------------"); Radio(); break; }
+                case "h":{ Console.WriteLine("---------------------"); Promedio(); break; }
+                case "99": {Console.WriteLine("---------------------");Salida(); break;}
             }
         }
-        
         static void Condicionales()
         {
-            string opcion_operadores;
+            string opcion_condicionales;
             Console.WriteLine("Sub menu Condicionales");
             Console.WriteLine("---------------------");
             Console.WriteLine("Selecciones una de las siguientes opciones: ");
@@ -140,64 +74,52 @@ namespace Trabajo
             Console.WriteLine(" c. si desea Ingrese  tres números enteros positivos para que calcule e imprima en pantalla el menor y el mayor de ellos");
             Console.WriteLine(" d. si desea Dar dos números A y B, sumarlos si A es menor que B o sino restarlos.");
             Console.WriteLine(" e. si desea Dar dos números A y B encontrar el cociente entre A y B.");
-            Console.WriteLine(" f. si desea Dar dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrariomultiplicarlos.");
+            Console.WriteLine(" f. si desea Dar dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.");
             Console.WriteLine(" g. si desea Escribir un algoritmo que determine si un año es bisiesto o no.");
             Console.WriteLine(" 99. si desea Salir del programa");
-            opcion_operadores = Console.ReadLine();
-
-            switch (opcion_operadores)
+            opcion_condicionales = Console.ReadLine();
+            switch (opcion_condicionales)
             {
-                case "a":
-                    {
-                        PositivoNegativo();
-                        break;
-                    }
-                case "b":
-                    {
-                        MayorMenor();
-                        break;
-                    }
-                case "c":
-                    {
-                        NumerosEnteros();
-                        break;
-                    }
-                case "d":
-                    {
-
-                        break;
-                    }
-                case "e":
-                    {
-
-                        break;
-                    }
-                case "f":
-                    {
-
-                        break;
-                    }
-                case "g":
-                    {
-
-                        break;
-                    }
-                case "h":
-                    {
-
-                        break;
-                    }
-                case "99":
-                    {
-
-                        break;
-                    }
+                case "a": { PositivoNegativo(); break; }     
+                case "b": { MayorMenor(); break; }     
+                case "c":{ NumerosEnteros(); break; }  
+                case "d": { SumaResta(); break; }
+                case "e":{ Cociente(); break; }      
+                case "f":{ sumaMultiplicacion();break;}   
+                case "g":{ AñoBisiesto();break;}
+                case "99":{ Salida(); break; }
+                Console.ReadKey();
 
             }
         }
         static void Ciclos ()
         {
-            Console.WriteLine();
+            string opcion_ciclos;
+            Console.WriteLine("Sub menu Condicionales");
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Selecciones una de las siguientes opciones: ");
+            Console.WriteLine(" a. si desea Imprimir todos los múltiplos de 3 que hay entre 1 y 100.");
+            Console.WriteLine(" b. si desea Imprimir los números impares entre 0 y 100.");
+            Console.WriteLine(" c. si desea Imprimir los números pares del 1 al 100.");
+            Console.WriteLine(" d. si Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30.");
+            Console.WriteLine(" e. si desea Escribir un programa que sume los cuadrados de los cien primeros números naturales,mostrando el resultado en pantalla.");
+            Console.WriteLine(" f. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los comprendidos entre ellos en secuencia ascendente.");
+            Console.WriteLine(" g. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente.");
+            Console.WriteLine(" 99. si desea Salir del programa");
+            opcion_ciclos = Console.ReadLine();
+            switch (opcion_ciclos)
+            {
+                case "a": { Multiplos(); break; }
+                case "b": { Impares();  break; }
+                case "c": { Pares();  break; }
+                case "d": { Cuadrados(); break; }
+                case "e": { break; }
+                case "f": { break; }
+                case "g": { break; }
+                case "99": { break; }
+            }
+
+
         }
         static void BaseTriangulo()
         {
@@ -205,7 +127,6 @@ namespace Trabajo
             int base_t = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la altura del triangulo: ");
             int altura = int.Parse(Console.ReadLine());
-
             double area = (base_t * altura) / 2;
             Console.WriteLine("El area del triangulo es: " + area + " cm²");
             Console.ReadKey();
@@ -242,13 +163,12 @@ namespace Trabajo
         }
         static void AreayVolumen()
         {
-            int altura, Base, radio, perimetro;
             Console.WriteLine("Ingrese la perimetro: ");
-            perimetro = int.Parse(Console.ReadLine());
+            int perimetro = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la altura");
-            altura = int.Parse(Console.ReadLine());
+            int altura = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese radio");
-            radio = int.Parse(Console.ReadLine());
+            int radio = int.Parse(Console.ReadLine());
             Console.WriteLine("el area del cilindro es: " + (2 * Math.PI * perimetro * altura));
             Console.WriteLine("el volumen del cilindro es:" + (Math.PI * radio * radio * altura));
             Console.ReadKey();
@@ -264,10 +184,8 @@ namespace Trabajo
         }
         static void Radio()
         {
-            int area;
             Console.WriteLine("Ingrese el area");
-            area = int.Parse(Console.ReadLine());
-
+            int area = int.Parse(Console.ReadLine());
             Console.WriteLine("El radio es: " + Math.Sqrt(area / Math.PI));
             Console.ReadKey();
 
@@ -278,14 +196,12 @@ namespace Trabajo
         }
         static void Promedio()
         {
-            int n1, n2, n3;
             Console.WriteLine("Ingrese primer valor: ");
-            n1 = int.Parse(Console.ReadLine());
+            int n1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese segundo valor: ");
-            n2 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese tercer valor: ");
-            n3 = int.Parse(Console.ReadLine());
-
+            int n3 = int.Parse(Console.ReadLine());
             Console.WriteLine("El promedio de los tres valores es de: " + (n1 + n2 + n3) / 3);
             Console.ReadKey();
         }
@@ -294,19 +210,11 @@ namespace Trabajo
             Console.WriteLine("Ingrese numero: ");
             int numero = int.Parse(Console.ReadLine());
             if (numero == 0)
-            {
-                Console.WriteLine("El numero " + numero + " es neutro");
-
-            }
+            { Console.WriteLine("El numero " + numero + " es neutro"); }
             else if (numero > 0)
-            {
-                Console.WriteLine("El numero " + numero + " es positivo.");
-            }
+            {  Console.WriteLine("El numero " + numero + " es positivo.");}
             else
-            {
-                Console.WriteLine("el numero " + numero + " es negativo");
-
-            }
+            { Console.WriteLine("el numero " + numero + " es negativo"); }
             Console.ReadKey();
         }
         static void MayorMenor()
@@ -316,9 +224,8 @@ namespace Trabajo
             Console.WriteLine("Ingrese segundo numero");
             float numero1 = float.Parse(Console.ReadLine());
             if (numero == numero1)
-            {
+            { 
                 Console.WriteLine("estos dos numeros son iguales: ");
-
             }
             else if (numero > numero1)
             {
@@ -365,9 +272,127 @@ namespace Trabajo
             {
                 Console.WriteLine("El numero menor es: " + num3);
             }
-            
+            Console.ReadKey();
         }
+        static void SumaResta()
+        {
+            int num1, num2,resultado,resultado2;
+            Console.WriteLine("Ingresa numero: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese numero: ");
+            num2 = int.Parse(Console.ReadLine()); 
+            if ( num1 >= num2 )
+            {
+                resultado = num1 + num2;
+                Console.WriteLine("La suma de los numeros es: " + resultado);
+            }
+            else if (num2 > num1)
+            {
+                resultado2 = num2 + num1;
+                Console.WriteLine("la resta de los numeros es: " + resultado2);
+            }
+            Console.ReadKey();
 
+        }
+        static void Cociente()
+        {
+            int dividendo, divisor;
+            Console.WriteLine("Ingrese el numero dividendo: ");
+            dividendo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese el numero divisor: ");
+            divisor = int.Parse(Console.ReadLine());
+            
+            
+            if (dividendo <= 0)
+            {
+                Console.WriteLine("No se puede hacer la operacion");
+            }
+            else if (divisor <= 0)
+            {
+                Console.WriteLine("No se puede hacer la operacion");
+            }
+            else
+            {
+                Console.WriteLine("El cociente es: " + dividendo / divisor);
+            }
+            Console.ReadKey();
+        }
+        static void sumaMultiplicacion()
+        {
+            int num1, num2;
+            Console.WriteLine("Ingrese numero: " );
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese segundo numero: ");
+            num2 = int.Parse(Console.ReadLine());
+            if ( num1 < 0 || num2 <0)
+            {
+                Console.WriteLine("La suma de los numeros es: " + (num1 + num2));
+            }
+            else if ( num1 >= 0 && num2 >= num1 )
+            {
+                Console.WriteLine("La multiplicacion de los numeros es: " + (num1 * num2));
+            }
+            Console.ReadKey();
+                
+
+        }
+        static bool Bisiesto(int año)
+        {
+           if (año % 4 == 0 &&(año % 100 !=0 || año % 400 ==0 ))return true;
+            return false;
+        }
+        static void AñoBisiesto ()
+        {
+            Console.WriteLine("Ingrese año: ");
+            int x = int.Parse(Console.ReadLine());  
+            if (Bisiesto(x)==true)
+            {
+                Console.WriteLine("El año {0} es bisiesto " , x);
+            }
+            else
+            {
+                Console.WriteLine("El año {0} NO es bisiesto" , x);
+            }
+            Console.ReadKey();
+        }
+        static void Multiplos()
+        {
+           for(int i = 1; i < 100; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Console.Write("{0}|", i);
+                }
+            }
+            Console.ReadKey();
+        }
+        static void Impares()
+        {
+            for (int i = 1; i < 100; i +=2)
+            {
+                Console.Write("{0}|", i);
+            
+            }
+            Console.ReadKey();
+        }
+        static void Pares()
+        {
+            for (int i = 1; i < 100; i ++)
+            {
+              if (i%2 ==0)
+                {
+                    Console.Write("{0}|" , i);
+                }
+            }
+            Console.ReadKey();
+        }
+        static void Cuadrados()
+        {
+            for (int i = 1; i < 31; i++)
+
+            Console.Write("| "+ i *i);
+            Console.ReadKey();
+        }
     }
 }
 
