@@ -24,12 +24,14 @@ namespace Trabajo
             Console.WriteLine(" 99. salir del programa");
 
             opcion2 = Console.ReadLine();
+            
             switch (opcion2)
             {
                 case "1": {Operacion(); break;}
                 case "2": { Condicionales(); break; }
                 case "3": { Ciclos(); break; }
                 case "99": {Salida(); break;}
+                default:  { Console.WriteLine("Opcion invalida"); break; }
             }
         }
         static void Operacion()
@@ -61,6 +63,7 @@ namespace Trabajo
                 case "g": {Console.WriteLine("---------------------"); Radio(); break; }
                 case "h":{ Console.WriteLine("---------------------"); Promedio(); break; }
                 case "99": {Console.WriteLine("---------------------");Salida(); break;}
+                default: { Console.WriteLine("Opcion invalida"); break; }
             }
         }
         static void Condicionales()
@@ -88,7 +91,8 @@ namespace Trabajo
                 case "f":{ sumaMultiplicacion();break;}   
                 case "g":{ AñoBisiesto();break;}
                 case "99":{ Salida(); break; }
-                Console.ReadKey();
+                default: { Console.WriteLine("Opcion invalida"); break; }
+                    Console.ReadKey();
 
             }
         }
@@ -104,7 +108,7 @@ namespace Trabajo
             Console.WriteLine(" d. si desea ver en pantalla los cuadrados de los números del 1 al 30.");
             Console.WriteLine(" e. si desea Escribir un programa que sume los cuadrados de los cien primeros números naturales,mostrando el resultado en pantalla.");
             Console.WriteLine(" f. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los comprendidos entre ellos en secuencia ascendente.");
-            Console.WriteLine(" g. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente.");
+            Console.WriteLine(" g. Sumar todos los números que se digitan por teclado mientras no sea cero.");
             Console.WriteLine(" 99. si desea Salir del programa");
             opcion_ciclos = Console.ReadLine();
             switch (opcion_ciclos)
@@ -115,8 +119,9 @@ namespace Trabajo
                 case "d": { Cuadrados(); break; }
                 case "e": { SumaCuadrados();  break; }
                 case "f": { comprendidos();  break; }
-                case "g": { break; }
+                case "g": { SumavariosN(); break; }   
                 case "99": { Salida(); break; }
+                default: { Console.WriteLine("Opcion invalida"); break; }
             }
 
 
@@ -417,8 +422,21 @@ namespace Trabajo
             for (int i = numenor; i <= numayor; i++ )
             {
                 Console.Write("| "+ i);
+            } 
+        }
+        static void SumavariosN ()
+        {
+            double valor =0;
+            double acumulado = 0;   
+            Console.WriteLine("¿cuantos numero quiere suma?");
+            int numerodeveces = int.Parse(Console.ReadLine());  
+            for (int i = 1; i <= numerodeveces; i++ )
+            {
+                Console.WriteLine("Ingrese valor: " + i);
+                valor = Convert.ToDouble(Console.ReadLine());    
+                acumulado = acumulado + valor;   
             }
-            
+            Console.WriteLine("La suma es: " + acumulado);
         }
     }
 }
