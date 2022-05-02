@@ -114,7 +114,7 @@ namespace Trabajo
                 case "c": { Pares();  break; }
                 case "d": { Cuadrados(); break; }
                 case "e": { SumaCuadrados();  break; }
-                case "f": { break; }
+                case "f": { comprendidos();  break; }
                 case "g": { break; }
                 case "99": { Salida(); break; }
             }
@@ -397,8 +397,7 @@ namespace Trabajo
         static void SumaCuadrados()
         {
             int suma = 0;
-            for (int i = 1; i <= 100; i++)
-              
+            for (int i = 1; i <= 100; i++)  
             { 
                 Console.WriteLine("Numero " + i);
                 suma = suma + i * i;
@@ -406,8 +405,20 @@ namespace Trabajo
             }
             Console.WriteLine("\nLa suma total de los cuadrados es: " + suma);
             Console.ReadKey();
-
-
+        }
+        static void comprendidos()
+        {
+            int numenor, numayor;
+            Console.WriteLine("Ingrese numero menor: ");    
+            numenor = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese numero mayor: ");
+            numayor = int.Parse(Console.ReadLine()); 
+            Console.WriteLine("Numeros comprendidos" );   
+            for (int i = numenor; i <= numayor; i++ )
+            {
+                Console.Write("| "+ i);
+            }
+            
         }
     }
 }
