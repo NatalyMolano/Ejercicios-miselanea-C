@@ -101,7 +101,7 @@ namespace Trabajo
             Console.WriteLine(" a. si desea Imprimir todos los múltiplos de 3 que hay entre 1 y 100.");
             Console.WriteLine(" b. si desea Imprimir los números impares entre 0 y 100.");
             Console.WriteLine(" c. si desea Imprimir los números pares del 1 al 100.");
-            Console.WriteLine(" d. si Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30.");
+            Console.WriteLine(" d. si desea ver en pantalla los cuadrados de los números del 1 al 30.");
             Console.WriteLine(" e. si desea Escribir un programa que sume los cuadrados de los cien primeros números naturales,mostrando el resultado en pantalla.");
             Console.WriteLine(" f. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los comprendidos entre ellos en secuencia ascendente.");
             Console.WriteLine(" g. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los números comprendidos entre ellos en secuencia ascendente.");
@@ -113,10 +113,10 @@ namespace Trabajo
                 case "b": { Impares();  break; }
                 case "c": { Pares();  break; }
                 case "d": { Cuadrados(); break; }
-                case "e": { break; }
+                case "e": { SumaCuadrados();  break; }
                 case "f": { break; }
                 case "g": { break; }
-                case "99": { break; }
+                case "99": { Salida(); break; }
             }
 
 
@@ -389,9 +389,25 @@ namespace Trabajo
         static void Cuadrados()
         {
             for (int i = 1; i < 31; i++)
-
-            Console.Write("| "+ i *i);
+            {Console.Write("| " + i * i);
+            Console.ReadKey(); }
+            
+        
+        }
+        static void SumaCuadrados()
+        {
+            int suma = 0;
+            for (int i = 1; i <= 100; i++)
+              
+            { 
+                Console.WriteLine("Numero " + i);
+                suma = suma + i * i;
+                Console.WriteLine("El cuadrado es: " + Math.Pow(i,2)); 
+            }
+            Console.WriteLine("\nLa suma total de los cuadrados es: " + suma);
             Console.ReadKey();
+
+
         }
     }
 }
