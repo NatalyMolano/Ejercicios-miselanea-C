@@ -54,15 +54,15 @@ namespace Trabajo
 
             switch (opcion_operadores)
             {
-                case "a": { Console.WriteLine("---------------------"); BaseTriangulo(); break; }
-                case "b": {  Console.WriteLine("---------------------");Suma();break;}
-                case "c": { Console.WriteLine("---------------------"); Cuadrado();break; }
-                case "d": {Console.WriteLine("---------------------");Conversion(); break; }
-                case "e": {Console.WriteLine("---------------------");AreayPerimetro();break;}
-                case "f": {Console.WriteLine("---------------------");AreayVolumen();break;  }
-                case "g": {Console.WriteLine("---------------------"); Radio(); break; }
-                case "h":{ Console.WriteLine("---------------------"); Promedio(); break; }
-                case "99": {Console.WriteLine("---------------------");Salida(); break;}
+                case "a": { BaseTriangulo(); break; }
+                case "b": { Suma();break;}
+                case "c": { Cuadrado();break; }
+                case "d": { Conversion(); break; }
+                case "e": { AreayPerimetro();break;}
+                case "f": { AreayVolumen();break;  }
+                case "g": { Radio(); break; }
+                case "h": { Promedio(); break; }
+                case "99":{ Salida(); break;}
                 default: { Console.WriteLine("Opcion invalida"); break; }
             }
         }
@@ -80,6 +80,7 @@ namespace Trabajo
             Console.WriteLine(" f. si desea Dar dos números A y B, sumarlos si al menos uno de ellos es negativo, en caso contrario multiplicarlos.");
             Console.WriteLine(" g. si desea Escribir un algoritmo que determine si un año es bisiesto o no.");
             Console.WriteLine(" 99. si desea Salir del programa");
+            Console.WriteLine("---------------------- ");
             opcion_condicionales = Console.ReadLine();
             switch (opcion_condicionales)
             {
@@ -99,17 +100,20 @@ namespace Trabajo
         static void Ciclos ()
         {
             string opcion_ciclos;
-            Console.WriteLine("Sub menu Condicionales");
+            Console.WriteLine("Sub menu Ciclos");
             Console.WriteLine("---------------------");
             Console.WriteLine("Selecciones una de las siguientes opciones: ");
             Console.WriteLine(" a. si desea Imprimir todos los múltiplos de 3 que hay entre 1 y 100.");
             Console.WriteLine(" b. si desea Imprimir los números impares entre 0 y 100.");
             Console.WriteLine(" c. si desea Imprimir los números pares del 1 al 100.");
             Console.WriteLine(" d. si desea ver en pantalla los cuadrados de los números del 1 al 30.");
-            Console.WriteLine(" e. si desea Escribir un programa que sume los cuadrados de los cien primeros números naturales,mostrando el resultado en pantalla.");
-            Console.WriteLine(" f. si desea Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los comprendidos entre ellos en secuencia ascendente.");
+            Console.WriteLine(" e. si desea Escribir un programa que sume los cuadrados de los cien primeros números naturales,");
+            Console.WriteLine(" mostrando el resultado en pantalla.");
+            Console.WriteLine(" f. si desea Dar dos números naturales, el primero menor que el segundo,mostrar todos los ");
+            Console.WriteLine(" comprendidos entre ellos en secuencia ascendente.");
             Console.WriteLine(" g. Sumar todos los números que se digitan por teclado mientras no sea cero.");
             Console.WriteLine(" 99. si desea Salir del programa");
+            Console.WriteLine("---------------------- ");
             opcion_ciclos = Console.ReadLine();
             switch (opcion_ciclos)
             {
